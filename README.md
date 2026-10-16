@@ -650,4 +650,8 @@ Use `git stash` to save unfinished work, fix the bug on a separate branch, and r
 
 ## Merge Conflict Resolution
 This section demonstrates resolving conflicting changes during collaboration.
+ conflict-version-b
 Version B: Git helps developers work independently.
+
+Version A: Git helps teams collaborate effectively.
+main
