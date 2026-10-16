@@ -647,3 +647,6 @@ Use `git stash` to save unfinished work, fix the bug on a separate branch, and r
 | Delete a merged branch | `git branch -d <name>` |
 | Save changes in a stash | `git stash push -m "message"` |
 | Restore the latest stash | `git stash pop` |
+
+## Merge Conflict Resolution
+This section demonstrates resolving conflicting changes during collaboration.
