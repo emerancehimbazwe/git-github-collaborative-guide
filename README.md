@@ -25,116 +25,6 @@ This section explains common Git commands, their syntax, practical examples, and
 
 **Commands:**
 
-    git config --global user.name "Your Name"
-    git config --global user.email "your@email.com"
-
-**Example:**
-
-    git config --global user.name "Emerance Himbazwe"
-    git config --global user.email "your-email@example.com"
-
-Replace the example email with the email associated with your GitHub account.
-
-**Use case:** Configure your identity before making commits.
-
-### 2.2 Initialize a Repository
-
-**Command:**
-
-    git init
-
-**Explanation:** Initializes a new Git repository in the current directory.
-
-**Use case:** Start tracking changes in a new project.
-
-### 2.3 Clone a Repository
-
-**Command:**
-
-    git clone https://github.com/USERNAME/REPOSITORY.git
-
-**Explanation:** Downloads a copy of a remote repository to your computer.
-
-**Use case:** Get a copy of an existing team project to work on locally.
-
-### 2.4 Check Repository Status
-
-**Command:**
-
-    git status
-
-**Explanation:** Displays changed, staged, and untracked files.
-
-**Use case:** Check which files need to be staged or committed.
-
-### 2.5 Stage Changes
-
-**Commands:**
-
-    git add README.md
-    git add .
-
-**Explanation:** Adds changes to the staging area before committing.
-
-**Use case:** Select the changes you want to include in the next commit.
-
-### 2.6 Commit Changes
-
-**Command:**
-
-    git commit -m "Add essential Git commands"
-
-**Explanation:** Records staged changes in the local repository.
-
-**Use case:** Save a meaningful unit of work with a descriptive commit message.
-
-### 2.7 View Commit History
-
-**Commands:**
-
-    git log
-    git log --oneline
-
-**Explanation:** Displays the history of commits in the repository.
-
-**Use case:** Review previous changes and identify who made each commit.
-
-
-## 3. Collaborative Contributions
-
-This documentation is a collaborative project. Each team member will contribute a separate section covering different Git commands, examples, and practical use cases.
-
-- **Emerance Himbazwe:** Introduction and essential Git commands.
-- **Roxane:** Branching, merging, merge conflict resolution, and collaboration.
-- **Kenia:** Remote repositories, synchronization, and advanced Git commands.
-
-# Git & GitHub Collaborative Documentation
-
-## 1. Introduction
-
-### What is Git?
-
-Git is a distributed version control system used to track changes in files and source code. It helps developers maintain project history, compare changes, and collaborate with other developers.
-
-### What is GitHub?
-
-GitHub is an online platform that hosts Git repositories. It allows developers to share code, collaborate on projects, and review changes.
-
-### Difference Between Git and GitHub
-
-- **Git:** Tracks changes to project files and records their history.
-- **GitHub:** Hosts Git repositories online and supports collaboration.
-
-## 2. Essential Git Commands
-
-This section explains common Git commands, their syntax, practical examples, and real-world uses.
-
-### 2.1 Configure Git
-
-**Purpose:** Set the name and email address recorded in your commits.
-
-**Commands:**
-
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
@@ -153,75 +43,63 @@ Replace the example email with the email associated with your GitHub account.
 
 ### 2.2 Initialize a Repository
 
-**Command:**
-
 ```bash
 git init
 ```
 
-**Explanation:** Initializes a new Git repository in the current directory.
+Initializes a new Git repository in the current directory.
 
 **Use case:** Start tracking changes in a new project.
 
 ### 2.3 Clone a Repository
 
-**Command:**
-
 ```bash
 git clone https://github.com/USERNAME/REPOSITORY.git
 ```
 
-**Explanation:** Downloads a copy of a remote repository to your computer.
+Downloads a copy of a remote repository to your computer.
 
 **Use case:** Get a copy of an existing team project to work on locally.
 
 ### 2.4 Check Repository Status
 
-**Command:**
-
 ```bash
 git status
 ```
 
-**Explanation:** Displays changed, staged, and untracked files.
+Displays changed, staged, and untracked files.
 
 **Use case:** Check which files need to be staged or committed.
 
 ### 2.5 Stage Changes
-
-**Commands:**
 
 ```bash
 git add README.md
 git add .
 ```
 
-**Explanation:** Adds changes to the staging area before committing.
+Adds changes to the staging area before committing.
 
 **Use case:** Select the changes you want to include in the next commit.
 
 ### 2.6 Commit Changes
 
-**Command:**
-
 ```bash
 git commit -m "Add essential Git commands"
 ```
 
-**Explanation:** Records staged changes in the local repository.
+Records staged changes in the local repository.
 
 **Use case:** Save a meaningful unit of work with a descriptive commit message.
 
 ### 2.7 View Commit History
-
-**Commands:**
 
 ```bash
 git log
 git log --oneline
 ```
 
-**Explanation:** Displays the history of commits in the repository.
+Displays the history of commits in the repository.
 
 **Use case:** Review previous changes and identify who made each commit.
 
@@ -233,6 +111,7 @@ This documentation is a collaborative project. Each team member contributes a se
 - **Roxane:** Branching, merging, merge conflict resolution, and collaboration.
 - **Kenia:** Remote repositories, synchronization, and advanced Git commands.
 
+These commands stage the README changes, create a local commit, and attempt to upload them to the remote `main` branch.
 ## 4. Remote Repositories and Advanced Git Commands — Kenia
 
 This section explains how to connect to remote repositories, synchronize changes between a local computer and GitHub, and manage commit history safely.
@@ -339,7 +218,9 @@ git commit -m "Document remote Git commands"
 git push origin main
 ```
 
-These commands stage the README changes, create a local commit, and attempt to upload it to the remote `main` branch.
+
+These commands stage the README changes, create a local commit, and attempt to upload them to the remote `main` branch.
+
 
 **Use case:** Share completed work with teammates through GitHub.
 
@@ -509,4 +390,273 @@ git push -u origin kenia-documentation
 
 After pushing, open a pull request on GitHub so teammates can review the work before merging it.
 
+ kenia-advanced-git
 **Note:** This example assumes `origin/main` exists and you have permission to push to the repository. If the team uses a different default branch or branch naming convention, adapt the commands accordingly.
+
+## 5. Branching and Collaboration — Roxane
+
+Branches let you work on a feature, a bug fix, or an experiment without touching the stable code. Each branch is an independent line of development, and you merge it back when the work is ready. This is the foundation of teamwork in Git.
+
+### 5.1 git branch
+
+`git branch` lists, creates, renames, and deletes branches. It does **not** move you onto a branch; use `git switch` for that.
+
+**Syntax**
+
+```bash
+git branch
+git branch -a
+git branch <name>
+git branch -m <old> <new>
+git branch -d <name>
+git branch -D <name>
+```
+
+**Explanation:**
+
+- `git branch` lists local branches.
+- `git branch -a` lists local and remote branches.
+- `git branch <name>` creates a new branch at the current commit.
+- `git branch -m <old> <new>` renames a branch.
+- `git branch -d <name>` deletes a branch that has already been merged.
+- `git branch -D <name>` force-deletes a branch, even if it is unmerged.
+
+**Example:**
+
+```bash
+git branch feature/login
+git branch
+```
+
+**Use case:** Create a branch for each task so `main` stays stable.
+
+**Naming tip:** Use short, descriptive names such as `feature/login`, `fix/navbar-bug`, or `docs/git-guide`.
+
+### 5.2 git switch
+
+`git switch` moves you to another branch. It was introduced in Git 2.23 as a clearer alternative to `git checkout`.
+
+**Syntax:**
+
+```bash
+git switch <branch>
+git switch -c <new-branch>
+git switch -
+```
+
+- `git switch <branch>` moves to an existing branch.
+- `git switch -c <new-branch>` creates and switches to a new branch.
+- `git switch -` returns to the previous branch.
+
+**Example:**
+
+```bash
+git switch -c feature/login
+git add .
+git commit -m "feat: add login form"
+git switch main
+```
+
+When you switch branches, the files in your working folder change to match that branch.
+
+**Use case:** Move between feature work and `main` when needed.
+
+**Older equivalent:** `git checkout <branch>` and `git checkout -b <new-branch>` perform similar operations.
+
+### 5.3 git merge
+
+`git merge` combines the history of one branch into the branch you are currently on.
+
+**Syntax:**
+
+```bash
+git merge <branch>
+git merge --no-ff <branch>
+git merge --abort
+```
+
+**Step-by-step example:**
+
+```bash
+git switch main
+git pull origin main
+git merge feature/login
+git branch -d feature/login
+```
+
+These commands switch to `main`, update it, merge `feature/login`, and delete the feature branch after it has been merged.
+
+**Two kinds of merge:**
+
+| Type | When it happens | Result |
+|---|---|---|
+| **Fast-forward** | The target branch has no new commits since the feature branch was created | Git moves the branch pointer forward without a merge commit |
+| **Three-way merge** | Both branches have new commits | Git combines the histories, usually with a merge commit |
+
+**Use case:** Merge a completed and reviewed feature into `main`.
+
+### 5.4 Merge Conflicts and How to Resolve Them
+
+A **merge conflict** happens when two branches change the same lines of a file, or one branch deletes a file that another edits, and Git cannot decide which changes to keep.
+
+**Step 1: Identify the conflict.**
+
+```bash
+git merge feature/login
+git status
+```
+
+Git lists conflicted files under “Unmerged paths.”
+
+**Step 2: Understand the conflict markers.**
+
+- Between `<<<<<<< HEAD` and `=======` is the current branch's version.
+- Between `=======` and `>>>>>>> feature/login` is the incoming branch's version.
+
+**Step 3: Edit the file.**
+
+Keep the correct content or combine both versions. Remove all conflict-marker lines.
+
+For example, the resolved file might contain:
+
+```html
+<h1>Welcome to the Student Portal</h1>
+```
+
+**Step 4: Finish the merge.**
+
+```bash
+git add index.html
+git commit
+```
+
+**Other useful commands:**
+
+```bash
+git merge --abort
+git checkout --ours <file>
+git checkout --theirs <file>
+git diff --name-only --diff-filter=U
+```
+
+- `git merge --abort` cancels an in-progress merge.
+- `git checkout --ours <file>` keeps the current branch's version of a conflicted file.
+- `git checkout --theirs <file>` keeps the incoming branch's version.
+- `git diff --name-only --diff-filter=U` lists files that remain conflicted.
+
+**How to avoid conflicts:**
+
+- Pull from `main` regularly.
+- Keep branches small and short-lived.
+- Communicate with teammates before editing the same file.
+
+### 5.5 git stash
+
+`git stash` temporarily saves uncommitted changes so you can switch tasks with a clean working directory and restore the changes later.
+
+**Syntax:**
+
+```bash
+git stash
+git stash push -m "message"
+git stash -u
+git stash list
+git stash pop
+git stash apply stash@{1}
+git stash drop stash@{0}
+git stash clear
+```
+
+**Explanation:**
+
+- `git stash` saves changes to tracked files.
+- `git stash push -m "message"` saves changes with a descriptive message.
+- `git stash -u` also includes untracked files.
+- `git stash list` lists saved stashes.
+- `git stash pop` restores the latest stash and removes it from the stash list if successful.
+- `git stash apply stash@{1}` restores a specific stash while keeping it in the list.
+- `git stash drop stash@{0}` deletes a specific stash.
+- `git stash clear` deletes all saved stashes.
+
+**Example:**
+
+```bash
+git stash push -m "half-done login form"
+git switch main
+git switch -c fix/urgent-bug
+```
+
+After fixing and committing the urgent bug, return to your feature branch and restore the saved work:
+
+```bash
+git switch feature/login
+git stash pop
+```
+
+**Use case:** Temporarily set aside unfinished work to handle another task.
+
+### 5.6 Real-World Teamwork Examples
+
+**Example 1: Feature-branch workflow**
+
+```bash
+git switch main
+git pull origin main
+git switch -c feature/contact-page
+git add .
+git commit -m "feat: add contact page"
+git push -u origin feature/contact-page
+```
+
+Then open a pull request on GitHub, ask a teammate to review it, and merge it into `main` once approved.
+
+After merging, clean up:
+
+```bash
+git switch main
+git pull origin main
+git branch -d feature/contact-page
+```
+
+**Example 2: Two teammates edit the same file**
+
+1. Two teammates start from `main` and create separate branches.
+2. Both edit the same line in `README.md`.
+3. The first teammate's pull request is merged.
+4. The second teammate updates their branch and resolves any conflicts.
+5. They stage and commit the resolved file, then push the branch.
+6. Their pull request can be reviewed and merged.
+
+**Example 3: Interrupted by an urgent bug**
+
+Use `git stash` to save unfinished work, fix the bug on a separate branch, and return to the original task with `git stash pop`.
+
+**Suggested team rules:**
+
+- Avoid committing directly to `main`; use branches and pull requests.
+- Create one branch per feature or fix.
+- Pull regularly and coordinate with teammates before integrating changes.
+- Write meaningful commit messages, such as `fix: correct footer link`.
+
+### 5.7 Quick Reference
+
+| Task | Command |
+|---|---|
+| List branches | `git branch` |
+| Create a branch | `git branch <name>` |
+| Create and switch | `git switch -c <name>` |
+| Switch branches | `git switch <name>` |
+| Merge a branch | `git merge <name>` |
+| Abort a merge | `git merge --abort` |
+| Delete a merged branch | `git branch -d <name>` |
+| Save changes in a stash | `git stash push -m "message"` |
+| Restore the latest stash | `git stash pop` |
+
+## Merge Conflict Resolution
+This section demonstrates resolving conflicting changes during collaboration.
+ conflict-version-b
+Version B: Git helps developers work independently.
+
+Version A: Git helps teams collaborate effectively.
+main
+main
