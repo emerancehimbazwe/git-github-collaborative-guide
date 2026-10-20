@@ -111,6 +111,7 @@ This documentation is a collaborative project. Each team member contributes a se
 - **Roxane:** Branching, merging, merge conflict resolution, and collaboration.
 - **Kenia:** Remote repositories, synchronization, and advanced Git commands.
 
+These commands stage the README changes, create a local commit, and attempt to upload them to the remote `main` branch.
 ## 4. Remote Repositories and Advanced Git Commands — Kenia
 
 This section explains how to connect to remote repositories, synchronize changes between a local computer and GitHub, and manage commit history safely.
@@ -217,7 +218,9 @@ git commit -m "Document remote Git commands"
 git push origin main
 ```
 
+
 These commands stage the README changes, create a local commit, and attempt to upload them to the remote `main` branch.
+
 
 **Use case:** Share completed work with teammates through GitHub.
 
@@ -387,6 +390,7 @@ git push -u origin kenia-documentation
 
 After pushing, open a pull request on GitHub so teammates can review the work before merging it.
 
+ kenia-advanced-git
 **Note:** This example assumes `origin/main` exists and you have permission to push to the repository. If the team uses a different default branch or branch naming convention, adapt the commands accordingly.
 
 ## 5. Branching and Collaboration — Roxane
@@ -654,4 +658,5 @@ This section demonstrates resolving conflicting changes during collaboration.
 Version B: Git helps developers work independently.
 
 Version A: Git helps teams collaborate effectively.
+main
 main
